@@ -1,0 +1,224 @@
+body{
+    margin:0;
+    padding:0;
+    color: grey;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-weight: 700;
+  }
+  
+  h1,h2,h3,h4,h5,h6{
+    font-weight: 900;
+    color: #fff;
+  }
+  
+  .wrapper{
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  main{
+    display: block;
+    background-color: #FFF;
+  }
+  
+  .container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  section.module p{
+    margin-bottom: 40px;
+  }
+  
+  section.module:last-child{
+    margin-bottom: 0;
+  }
+  
+  section.module h2{
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+  
+  section.module.content{
+   padding: 40px 0;
+   background: #222222; 
+  }
+  
+  section.module.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  
+  section.module.parallax:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+  }
+  
+  
+  section.module.parallax-1{
+    background-image: url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80");
+  }
+  
+  section.module.parallax-2{
+    background-image: url("https://static.vecteezy.com/ti/fotos-gratis/p2/1781565-close-up-de-uma-motocicleta-sendo-lavada-gratis-foto.jpg");
+  }
+  
+  section.module.parallax-3{
+    background-image: url("https://www.zuldigital.com.br/blog/wp-content/uploads/2021/11/shutterstock_1859193349_Easy-Resize.com_.jpg");
+  }
+  
+  section.module.parallax h1{
+    color: #FFF;
+    text-align: center;
+    font-size: 78px;
+    z-index: 50;
+    text-transform: uppercase;
+  }
+  
+  @media all and (max-width: 820px) {
+    section.module h2 {
+      font-size: 32px;
+    }
+    .module h2, p{
+      padding: 0 8px;
+    }
+  
+    .container{
+      margin:0;
+      padding:0;
+    }
+  
+    section.module.parallax h1 {
+      font-size: 36px;
+    }
+  }
+  .btn{
+    position: relative;
+    display: inline-block;
+    padding: 12px 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: .5s;
+    overflow: hidden;
+  }
+  .btn:hover{
+    background: #000;
+    border-radius: 5px;
+    color: white;
+  }
+  .btn span{
+    position: absolute;
+    display: block;
+  }
+  .btn span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent,#000);
+    animation: btn1 1s linear infinite;
+  }
+  @keyframes btn1{
+    0%{
+        left: -100%;
+    }
+    50%,
+    100%{
+        left: 100%;
+    }
+  }
+  .btn span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,#000);
+    animation: btn2 1s linear infinite;
+    animation-delay: .20s;
+  }
+  @keyframes btn2{
+    0%{
+        top: -100%;
+    }
+    50%,
+    100%{
+        top: 100%;
+    }
+  }
+  .btn span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(270deg, transparent,#000);
+    animation: btn3 1s linear infinite;
+    animation-delay: .45s;
+  }
+  @keyframes btn3{
+    0%{
+        right: -100%;
+    }
+    50%,
+    100%{
+        right: 100%;
+    }
+  }
+  .btn span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(26deg, transparent, #000);
+    animation: btn4 1s linear infinite;
+    animation-delay: .70s;
+  }
+  @keyframes btn4{
+    0%{
+        bottom: -100%;
+    }
+    50%,
+    100%{
+        bottom: 100%;
+    }
+  }
+  @media (max-width: 405px){
+    .login{
+        width: 90%;
+    }
+  }
+  
+  #none {
+    display: none;
+  }
+  
+  #senha:focus ~ #none {
+    display: block;
+    color: #fff;
+  }
